@@ -91,6 +91,12 @@ namespace SpeedUpImportingProcess.BenchMark.Benchmarks
         }
 
         [Benchmark]
+        public async Task ImportParallelAsync_TableValued()
+        {
+            await FileFullName.ImportParallelAsync_TableValued(NewDbContext);
+        }
+
+        [Benchmark]
         public async Task ImportParallelAsyncBulkCopy()
         {
             await FileFullName.ImportParallelAsyncBulkCopyAsync(NewDbContext);

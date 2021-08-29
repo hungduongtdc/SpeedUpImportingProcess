@@ -46,6 +46,15 @@ namespace SpeedUpImportingProcess.BenchMark
             //.GetAwaiter()
             //.GetResult();
 
+          //  new BenchMarkReadCsvFile()
+          //  {
+          //      FileFullName = @"D:\3318343\Attendance_export_200k.txt"
+          //  }
+          //.GlobalSetup()
+          //.ImportParallelAsync_TableValued()
+          //.GetAwaiter()
+          //.GetResult();
+
             //  new BenchMarkReadCsvFile()
             //{
             //    FileFullName = @"D:\3318343\Attendance_export_200k.txt"
@@ -55,14 +64,14 @@ namespace SpeedUpImportingProcess.BenchMark
             //.GetAwaiter()
             //.GetResult();
 
-            new BenchMarkReadCsvFile()
-            {
-                FileFullName = @"d:\3318343\attendance_export_200k.txt"
-            }
-          .GlobalSetup()
-          .FinalSolution()
-          .GetAwaiter()
-          .GetResult();
+            //  new BenchMarkReadCsvFile()
+            //  {
+            //      FileFullName = @"d:\3318343\attendance_export_200k.txt"
+            //  }
+            //.GlobalSetup()
+            //.FinalSolution()
+            //.GetAwaiter()
+            //.GetResult();
 
             Console.WriteLine("Finished");
 

@@ -12,6 +12,24 @@ namespace SpeedUpImportingProcess.BenchMark.Extensions.Enumeration
 {
     public static class EnumerableExtensions
     {
+        public static DataTable ToDataTable<T>(this IEnumerable<T> data)
+        {
+            DataTable dt = new DataTable();
+            typeof(T).GetProperties().ForAll(p =>
+            {
+                dt.Columns.Add(p.Name, p.PropertyType);
+            });
+            foreach (var item in data)
+            {
+                var newRow = dt.NewRow();
+                typeof(T).GetProperties().ForAll(p =>
+                {
+                    newRow[p.Name] = p.GetValue(item);
+                });
+                dt.Rows.Add(newRow);
+            }
+            return dt;
+        }
         public static DataTable ToDataTable(this IEnumerable<RowDataDto> rowDataDtos)
         {
             if (rowDataDtos?.Any() == false)
