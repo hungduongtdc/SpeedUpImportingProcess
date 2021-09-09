@@ -20,5 +20,8 @@
     </PackageReference>
     <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="5.2.6" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBInitial\" />
+  </ItemGroup>
 
 </Project>
