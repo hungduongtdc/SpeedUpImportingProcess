@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slaeforce Chatbot intergration</title>
+  </head>
+  <body>
+    <!-- <script src="saleforce.js"></script> -->
+    <script
+      type="text/javascript"
+      src="https://d.la2-c1cs-hnd.salesforceliveagent.com/content/g/js/44.0/deployment.js"
+    ></script>
+    <script type="text/javascript">
+      window.name = "saleforce-chat-bot";
+      liveagent.init(
+        "https://d.la2-c1cs-hnd.salesforceliveagent.com/chat",
+        "5720o000000gBAi",
+        "00D0T0000008lP8"
+      );
+    </script>
+    <a
+      id="liveagent_button_online_5730o000000gBLq"
+      href="javascript://Chat"
+      onclick="liveagent.startChat('5730o000000gBLq')"
+      style="font-size: 24px; text-decoration: none"
+      >Start chat</a
+    >
+    <div id="liveagent_button_offline_5730o000000gBLq" style="display: none">
+      <!-- Offline Chat Content -->
+    </div>
+    <script type="text/javascript">
+      if (!window._laq) {
+        window._laq = [];
+      }
+      window._laq.push(function () {
+        liveagent.showWhenOnline(
+          "5730o000000gBLq",
+          document.getElementById("liveagent_button_online_5730o000000gBLq")
+        );
+        liveagent.showWhenOffline(
+          "5730o000000gBLq",
+          document.getElementById("liveagent_button_offline_5730o000000gBLq")
+        );
+      });
+      setTimeout(() => {
+        liveagent.startChatWithWindow("5730o000000gBLq", "saleforce-chat-bot");
+      }, 500);
+    </script>
+  </body>
+</html>
